@@ -6,7 +6,7 @@ function App() {
 
   useEffect(()=>{
     const storageTodos = JSON.parse(localStorage.getItem('todos'));
-    if(storageTodos.length>0){
+    if(storageTodos && storageTodos.length>0){
       setTodos(storageTodos);
     }   
   },[])
